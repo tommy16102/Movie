@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const NavBarBlock = styled.div`
 	
@@ -29,23 +30,26 @@ const NavBlock = styled.li`
 `;
 
 
-function NavItem({id, text}){
-    return (
+function NavItem({id, text, path, history}){
+	const realPath = {path};
+	return (
         <>
-            <NavBlock>{text}</NavBlock>
+            <NavBlock>
+				<Link to = {realPath.path} style={{textDecoration: 'none', color: 'inherit'}}>{text}</Link>
+			</NavBlock>
         </>
     )
 }
 
-function NaviBar(){
+const NaviBar = ({history}) => {
 	return(
 		<>
 			<NavBarBlock>
 				<NavBlockList>
-					<NavItem text="현재 상영 영화"/>
-					<NavItem text="상영 예정 영화"/>
-					<NavItem text="영화 순위"/>
-					<NavItem text="영화 검색"/>
+					<NavItem  text="현재 상영 영화" path = "/currentMovies" />
+					<NavItem path = "/comingSoonMovies" text="상영 예정" />
+					<NavItem path = "/rank" text="영화 순위" />
+					<NavItem path = "/about" text="우리가 누구?" />
 				</NavBlockList>
 			</NavBarBlock>
 		</>
