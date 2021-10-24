@@ -24,7 +24,7 @@ const NavBlock = styled.li`
 	margin :10px 10px 10px 10px;
 	border:1.3px dotted white;
 	border-radius:10px;
-	background-color: #333333;
+	background-color: #333333; 
 	cursor: pointer;
 `;
 
