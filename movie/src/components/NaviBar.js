@@ -27,6 +27,13 @@ const NavBlock = styled.li`
 	border-radius:10px;
 	background-color: #333333; 
 	cursor: pointer;
+
+	&:hover {
+		background: #555555;
+	};
+	&:active {
+		background: #999999;
+	};
 `;
 
 

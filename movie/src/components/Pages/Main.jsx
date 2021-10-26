@@ -14,6 +14,7 @@ const Main = ()=>{
     return(
         <MainDiv>
             상영 영화 리스트 ?
+            
         </MainDiv>
     );
 };
